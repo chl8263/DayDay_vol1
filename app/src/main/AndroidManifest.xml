@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yuntaesik.testactivity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dayday_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".intro.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".function.CameraActivity" />
+        <activity
+            android:name=".function.WriteActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".function.CalnedarActivity" />
+        <activity
+            android:name=".function.WriteModifyActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".function.GalleryActivity" />
+        <activity android:name=".function.SettingActivity"></activity>
+        <activity android:name=".setting.LockConfirmActivity"></activity>
+        <activity android:name=".setting.LockActivity"></activity>
+        <activity android:name=".setting.HelpActivity"></activity>
+        <activity android:name=".setting.InfoActivity"></activity>
+        <activity android:name=".function.EnlargementActivity"></activity>
+        <activity
+            android:name=".dialog.SignDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
+            android:name=".dialog.PickerDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
+        <activity
+            android:name=".dialog.deleteDialog"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"></activity>
+    </application>
+
+</manifest>
